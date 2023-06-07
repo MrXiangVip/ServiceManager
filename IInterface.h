@@ -8,8 +8,13 @@
 
 #include "Binder.h"
 
+class IInterface : public virtual RefBase
+{
 
-class BnInterface : public  BBinder{
+};
+
+template<typename INTERFACE>
+class BnInterface : public INTERFACE, public  BBinder{
 //    virtual sp<IInterface>      queryLocalInterface(const String& _descriptor);
 
 };
