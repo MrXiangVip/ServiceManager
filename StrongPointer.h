@@ -10,7 +10,7 @@ template <typename T>
 class sp
 {
 public:
-    inline sp() : m_ptr(0) { }
+    inline sp() : m_ptr(nullptr) { }
 
     sp(T* other);  // NOLINT, implicit
     sp(const sp<T>& other);

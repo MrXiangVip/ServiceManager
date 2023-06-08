@@ -4,6 +4,14 @@
 //
 #include <iostream>
 #include "ServiceManager.h"
+
+ServiceManager::ServiceManager( ) {
+
+}
+
+ServiceManager::~ServiceManager() {
+
+}
 int ServiceManager::getService(const std::string& name, sp<IBinder>* outBinder) {
     cout << "getService " << name;
     *outBinder = tryGetService(name, true);

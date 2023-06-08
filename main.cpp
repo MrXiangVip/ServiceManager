@@ -7,6 +7,7 @@ int main()
 
     sp<ServiceManager> manager = new ServiceManager();
 
-    manager->addService("hello", nullptr, false,0);
+    manager->addService("manager", nullptr, false,0);
+//    manager->addService("manager", manager, false,0);
     return 0;
 }

@@ -15,6 +15,9 @@ using namespace std;
 class ServiceManager :public BnServiceManager{
 
 public:
+    ServiceManager( );
+    ~ServiceManager( );
+
     int getService(const std::string& name, sp<IBinder>* outBinder) ;
     int checkService(const std::string& name, sp<IBinder>* outBinder) ;
     int addService(const std::string& name, const sp<IBinder>& binder,
