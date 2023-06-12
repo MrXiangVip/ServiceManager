@@ -8,7 +8,11 @@
 
 class BBinder : public IBinder
 {
-
+//public:
+//    BBinder();
+private:
+//    BBinder(const BBinder& o);
+//    BBinder&    operator=(const BBinder& o);
 };
 
 #endif //UNTITLED1_BINDER_H

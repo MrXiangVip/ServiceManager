@@ -6,7 +6,7 @@
 #include "ServiceManager.h"
 
 ServiceManager::ServiceManager( ) {
-
+    printf("构造ServiceManager \n");
 }
 
 ServiceManager::~ServiceManager() {
@@ -14,14 +14,14 @@ ServiceManager::~ServiceManager() {
 }
 int ServiceManager::getService(const std::string& name, sp<IBinder>* outBinder) {
     cout << "getService " << name;
-    *outBinder = tryGetService(name, true);
+//    *outBinder = tryGetService(name, true);
     // returns ok regardless of result for legacy reasons
     return 0;
 }
 
 int ServiceManager::checkService(const std::string& name, sp<IBinder>* outBinder) {
     cout << "checkService " << name;
-    *outBinder = tryGetService(name, false);
+//    *outBinder = tryGetService(name, false);
     // returns ok regardless of result for legacy reasons
     return 0;
 }
@@ -30,12 +30,12 @@ sp<IBinder> ServiceManager::tryGetService(const std::string& name, bool startIfN
     cout << "tryGetService " << name;
     sp<IBinder> out;
     Service* service = nullptr;
-    if (auto it = mNameToService.find(name); it != mNameToService.end()) {
-        service = &(it->second);
-
-
-        out = service->binder;
-    }
+//    if (auto it = mNameToService.find(name); it != mNameToService.end()) {
+//        service = &(it->second);
+//
+//
+//        out = service->binder;
+//    }
 
 
 

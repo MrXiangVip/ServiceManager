@@ -5,9 +5,9 @@
 int main()
 {
 
-    sp<ServiceManager> manager = new ServiceManager();
+    ServiceManager   *pServiceManager = new ServiceManager();
+    sp<ServiceManager> manager = pServiceManager;
 
-    manager->addService("manager", nullptr, false,0);
-//    manager->addService("manager", manager, false,0);
+    manager->addService("manager", manager, false,0);
     return 0;
 }

@@ -8,8 +8,10 @@
 
 #include "IServiceManager.h"
 #include "IInterface.h"
-class BnServiceManager : public BnInterface<IServiceManager>{
 
+class BnServiceManager : public BnInterface<IServiceManager>{
+public:
+//    explicit BnServiceManager();
 };
 
 #endif //UNTITLED1_BNSERVICEMANAGER_H
