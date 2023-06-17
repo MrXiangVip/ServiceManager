@@ -14,6 +14,6 @@ public:
     void            forceIncStrong(const void* id) const;
 
     //! DEBUGGING ONLY: Get current strong ref count.
-    int32_t         getStrongCount() const;
+    int         getStrongCount() const;
 };
 #endif //UNTITLED1_REFBASE_H
