@@ -6,6 +6,24 @@
 #ifndef UNTITLED1_STRONGPOINTER_H
 #define UNTITLED1_STRONGPOINTER_H
 
+#include <stdio.h>
+#define COMPARE(_op_)                                           \
+inline bool operator _op_ (const sp<T>& o) const {              \
+    return m_ptr _op_ o.m_ptr;                                  \
+}                                                               \
+inline bool operator _op_ (const T* o) const {                  \
+    return m_ptr _op_ o;                                        \
+}                                                               \
+template<typename U>                                            \
+inline bool operator _op_ (const sp<U>& o) const {              \
+    return m_ptr _op_ o.m_ptr;                                  \
+}                                                               \
+template<typename U>                                            \
+inline bool operator _op_ (const U* o) const {                  \
+    return m_ptr _op_ o;                                        \
+}                                                               \
+
+
 template <typename T>
 class sp
 {
@@ -27,11 +45,21 @@ public:
     inline  T&      operator* () const  { return *m_ptr; }
     inline  T*      operator-> () const { return m_ptr;  }
     inline  T*      get() const         { return m_ptr; }
+    // Operators
 
+    COMPARE(==)
+    COMPARE(!=)
+    COMPARE(>)
+    COMPARE(<)
+    COMPARE(<=)
+    COMPARE(>=)
 public:
     T* m_ptr;
 
 };
+
+#undef COMPARE
+
 
 template<typename T>
 sp<T>::sp(T* other)
