@@ -4,6 +4,7 @@
 #ifndef ANDROID_BINDER_SERVICE_H
 #define ANDROID_BINDER_SERVICE_H
 
+#include <stdio.h>
 #include "StrongPointer.h"
 #include "IServiceManager.h"
 using namespace std;
@@ -13,6 +14,7 @@ class BinderService {
 public:
     static int publish(bool allowIsolated = false,
                             int dumpFlags=0 ) {
+        printf("publish \n");
         sp <IServiceManager> sm(defaultServiceManager());
         return sm->addService(string(SERVICE::getServiceName()), new SERVICE(), allowIsolated,
                               dumpFlags);
