@@ -12,9 +12,9 @@ using namespace std;
 class IServiceManager : public IInterface{
 
 public:
-//    virtual int addService(const string& name, const sp<IBinder>& service,
-//                                bool allowIsolated = false,
-//                                int dumpsysFlags = 0) = 0;
+    virtual int addService(const string& name, const sp<IBinder>& service,
+                                bool allowIsolated = false,
+                                int dumpsysFlags = 0) = 0;
 };
 sp<IServiceManager> defaultServiceManager();
 

@@ -9,5 +9,5 @@ add_executable(servicemanager ${ManagerSources})
 
 
 
-set(InstalldSources installd/installd.cpp installd/InstalldNativeService.cpp)
+set(InstalldSources installd/installd.cpp installd/InstalldNativeService.cpp  IServiceManager.cpp)
 add_executable(installd ${InstalldSources})

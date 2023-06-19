@@ -6,6 +6,7 @@
 #ifndef UNTITLED1_BINDER_H
 #define UNTITLED1_BINDER_H
 
+#include "IBinder.h"
 class BBinder : public IBinder
 {
 //public:

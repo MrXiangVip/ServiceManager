@@ -7,7 +7,7 @@
 
 int InstalldNativeService::start() {
     printf("InstalldNativeService start \n");
-//    int ret = BinderService<InstalldNativeService>::publish();
+    int ret = BinderService<InstalldNativeService>::publish();
 
     return 0;
 }
