@@ -9,6 +9,7 @@ static pthread_once_t gTLSOnce = PTHREAD_ONCE_INIT;
 static pthread_key_t gTLSKey = 0;
 Looper::Looper(bool allowNonCallbacks)    : mAllowNonCallbacks(allowNonCallbacks)
 {
+    rebuildEpollLocked();
 
 }
 
@@ -54,4 +55,9 @@ void Looper::setForThread(const sp<Looper>& looper) {
 int Looper::pollAll(int timeoutMillis, int* outFd, int* outEvents, void** outData) {
     printf("pollAll \n");
     return 0;
+}
+
+
+void Looper::rebuildEpollLocked() {
+
 }

@@ -23,6 +23,8 @@ public:
 
     static sp<Looper> getForThread();
 
+    void rebuildEpollLocked();
+
     static void initTLSKey();
     static void threadDestructor(void *st);
 
