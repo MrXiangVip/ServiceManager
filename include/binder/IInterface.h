@@ -10,12 +10,25 @@
 
 class IInterface : public virtual RefBase
 {
-
+//public:
+//    IInterface();
+//    static sp<IBinder>  asBinder(const IInterface*);
+//    static sp<IBinder>  asBinder(const sp<IInterface>&);
+//
+//protected:
+//    virtual                     ~IInterface();
+//    virtual IBinder*            onAsBinder() = 0;
 };
 
 template<typename INTERFACE>
 class BnInterface : public INTERFACE, public  BBinder{
-//    virtual sp<IInterface>      queryLocalInterface(const String& _descriptor);
+public:
+//    virtual sp<IInterface>      queryLocalInterface(const String16& _descriptor);
+//    virtual const String16&     getInterfaceDescriptor() const;
+//
+protected:
+//    typedef INTERFACE           BaseInterface;
+//    virtual IBinder*            onAsBinder();
 
 };
 
