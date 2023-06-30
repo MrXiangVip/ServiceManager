@@ -6,7 +6,7 @@
 #define SERVICEMANAGER_INSTALLDNATIVESERVICE_H
 
 #include <stdio.h>
-#include "../BinderService.h"
+#include "../include/binder/BinderService.h"
 #include "BnInstalld.h"
 class InstalldNativeService : public BinderService<InstalldNativeService>, public BnInstalld{
 public:

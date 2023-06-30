@@ -2,8 +2,8 @@
 // Created by xshx on 2023/6/17.
 // 源码路径: frameworks/native/libs/binder/ProcessState.cpp
 //
-#include "ProcessState.h"
-#include "Static.h"
+#include "../include/binder/ProcessState.h"
+#include "../include/binder/Static.h"
 sp<ProcessState> ProcessState::self()
 {
     gProcess = new ProcessState("");

@@ -5,8 +5,8 @@
 #ifndef SERVICEMANAGER_LOOPER_H
 #define SERVICEMANAGER_LOOPER_H
 
-#include "RefBase.h"
-#include "StrongPointer.h"
+#include "../include/binder/RefBase.h"
+#include "../include/binder/StrongPointer.h"
 class Looper : public RefBase {
 
 public:

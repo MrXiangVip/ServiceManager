@@ -7,9 +7,9 @@
 #define UNTITLED1_SERVICEMANAGER_H
 
 #include <map>
-#include "IBinder.h"
+#include "../include/binder/IBinder.h"
 #include "BnServiceManager.h"
-#include "StrongPointer.h"
+#include "../include/binder/StrongPointer.h"
 #include <vector>
 using namespace std;
 class ServiceManager :public BnServiceManager{

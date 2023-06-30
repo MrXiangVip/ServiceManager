@@ -6,8 +6,8 @@
 #ifndef UNTITLED1_BNSERVICEMANAGER_H
 #define UNTITLED1_BNSERVICEMANAGER_H
 
-#include "IServiceManager.h"
-#include "IInterface.h"
+#include "../include/binder/IServiceManager.h"
+#include "../include/binder/IInterface.h"
 
 class BnServiceManager : public BnInterface<IServiceManager>{
 public:

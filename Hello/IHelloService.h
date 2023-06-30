@@ -5,7 +5,7 @@
 #ifndef SERVICEMANAGER_BNHELLOSERVICE_H
 #define SERVICEMANAGER_BNHELLOSERVICE_H
 
-#include "../IInterface.h"
+#include "../include/binder/IInterface.h"
 #include <stdio.h>
 class IHelloService: public IInterface {
 

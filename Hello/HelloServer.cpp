@@ -1,11 +1,11 @@
 //
 // Created by xshx on 2023/6/30.
 //
-#include "../StrongPointer.h"
-#include "../ProcessState.h"
-#include "../IServiceManager.h"
+#include "../include/binder/StrongPointer.h"
+#include "../include/binder/ProcessState.h"
+#include "../include/binder/IServiceManager.h"
 #include "IHelloService.h"
-#include "../IPCThreadState.h"
+#include "../include/binder/IPCThreadState.h"
 int main(int argc, char const *argv[])
 {
     sp<ProcessState> proc(ProcessState::self());
