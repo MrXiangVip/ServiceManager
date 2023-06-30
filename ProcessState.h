@@ -14,8 +14,11 @@ class ProcessState : public virtual RefBase
 {
 
 public:
+    static  sp<ProcessState>    self();
+
     static  sp<ProcessState>    initWithDriver(const char *driver);
 
+    void                startThreadPool();
 
     int            setThreadPoolMaxThreadCount(size_t maxThreads);
 

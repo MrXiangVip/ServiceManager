@@ -19,4 +19,14 @@ class BnInterface : public INTERFACE, public  BBinder{
 
 };
 
+template<typename INTERFACE>
+class BpInterface : public INTERFACE, public BpRefBase
+{
+public:
+//    explicit                    BpInterface(const sp<IBinder>& remote);
+
+protected:
+//    typedef INTERFACE           BaseInterface;
+//    virtual IBinder*            onAsBinder();
+};
 #endif //UNTITLED1_IINTERFACE_H

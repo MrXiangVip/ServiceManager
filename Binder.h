@@ -16,4 +16,9 @@ private:
 //    BBinder&    operator=(const BBinder& o);
 };
 
+class BpRefBase : public virtual RefBase
+{
+
+};
+
 #endif //UNTITLED1_BINDER_H
